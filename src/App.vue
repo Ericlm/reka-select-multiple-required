@@ -1,15 +1,44 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
+import {
+  SelectContent,
+  SelectItem,
+  SelectItemText,
+  SelectPortal,
+  SelectRoot,
+  SelectTrigger,
+  SelectValue,
+} from 'reka-ui'
+
+const value = ref<('a' | 'b' | 'c')[]>([])
+</script>
 
 <template>
-  <main>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sapiente itaque obcaecati
-    voluptates, eius rem magni expedita quibusdam laboriosam harum velit tempora, nam dicta quaerat
-    suscipit repudiandae incidunt possimus minus saepe ducimus debitis? Distinctio, quaerat saepe,
-    quibusdam perferendis eaque, tempore eius facere voluptatum voluptatem voluptate alias dolorum.
-    Iste repudiandae impedit ad illum delectus tenetur sequi modi id laboriosam fugiat harum non,
-    aperiam ab aliquid distinctio at nostrum? Culpa aut repellat, minus qui dolorum adipisci,
-    quidem, ipsam consectetur minima libero pariatur perspiciatis dolor in dolorem suscipit
-    temporibus? Esse, possimus doloribus odio quia a adipisci at, molestiae deleniti asperiores
-    magni pariatur. Veniam.
-  </main>
+  <form @submit.prevent="console.log(value)">
+    <SelectRoot v-model="value" multiple required>
+      <SelectTrigger>
+        <SelectValue placeholder="Select" />
+      </SelectTrigger>
+
+      <SelectPortal>
+        <SelectContent class="border-gray-300 border rounded-md shadow-md">
+          <SelectItem value="a">
+            <SelectItemText> Item A </SelectItemText>
+          </SelectItem>
+
+          <SelectItem value="b">
+            <SelectItemText> Item B </SelectItemText>
+          </SelectItem>
+
+          <SelectItem value="c">
+            <SelectItemText> Item C </SelectItemText>
+          </SelectItem>
+        </SelectContent>
+      </SelectPortal>
+    </SelectRoot>
+
+    <button type="submit" class="shadow-sm ml-10 bg-indigo-600 text-white px-3 py-2">submit</button>
+  </form>
+
+  <kbd>Value is : {{ value }}</kbd>
 </template>
