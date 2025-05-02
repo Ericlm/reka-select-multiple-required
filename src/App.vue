@@ -1,47 +1,15 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
   <main>
-    <TheWelcome />
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sapiente itaque obcaecati
+    voluptates, eius rem magni expedita quibusdam laboriosam harum velit tempora, nam dicta quaerat
+    suscipit repudiandae incidunt possimus minus saepe ducimus debitis? Distinctio, quaerat saepe,
+    quibusdam perferendis eaque, tempore eius facere voluptatum voluptatem voluptate alias dolorum.
+    Iste repudiandae impedit ad illum delectus tenetur sequi modi id laboriosam fugiat harum non,
+    aperiam ab aliquid distinctio at nostrum? Culpa aut repellat, minus qui dolorum adipisci,
+    quidem, ipsam consectetur minima libero pariatur perspiciatis dolor in dolorem suscipit
+    temporibus? Esse, possimus doloribus odio quia a adipisci at, molestiae deleniti asperiores
+    magni pariatur. Veniam.
   </main>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
